@@ -1,0 +1,281 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1A1A1A; /* Negro opaco */
+    color: white;
+}
+
+/* Header */
+header {
+    background-color: #FFD700; /* Amarillo metálico */
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #D10000; /* Rojo Ferrari */
+}
+
+/* Carrusel */
+#carrusel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.carrusel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.carrusel-item img {
+    width: 180%;
+    max-width: 100%;
+    height: 700PX;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 2em;
+    transition: background-color 0.3s;
+}
+
+.carrusel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carrusel-btn.prev {
+    left: 0;
+}
+
+.carrusel-btn.next {
+    right: 0;
+}
+
+/* Menú */
+#menu {
+    background-color: #333;
+    padding: 30px;
+    text-align: center;
+}
+
+#menu h2 {
+    font-size: 2em;
+    color: #FFD700; /* Amarillo metálico */
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.producto img {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.producto img:hover {
+    transform: scale(1.1);
+}
+
+.producto p {
+    color: #FFD700; /* Amarillo metálico */
+    font-size: 1.1em;
+}
+
+/* Promociones */
+#promociones {
+    background-color: #D10000; /* Rojo Ferrari */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Pedido */
+#pedido {
+    padding: 30px;
+    background-color: #34495e;
+    text-align: center;
+}
+
+#pedido h2 {
+    color: #FFD700; /* Amarillo metálico */
+    font-size: 2.5em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #FFD700; /* Amarillo metálico */
+    border: none;
+    color: black;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #D10000; /* Rojo Ferrari */
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+}
+
+/* Animación para el texto en el header */
+header h1 {
+    animation: slideIn 2s ease-out;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Animación del carrusel */
+@keyframes slideCarousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 100px) {
+    .productos {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .producto img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.contact-form {
+    background: #c70404;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.913);
+  }
+  
+  .contact-form label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact-form button {
+    background: #d7fe14;
+    color: rgb(10, 12, 0);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+  
+  .contact-form button:hover {
+    background: #cb85c8;
+  }
+  
+  #statusMessage {
+    margin-top: 1rem;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+  }
+  /*media queries*/
+    @media (max-width: 7683px){
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .gallery .images{
+        gap: 2rem;
+    }
+    .gallery img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
